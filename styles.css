@@ -26,7 +26,6 @@ body {
 main {
     flex: 1;
 }
-
 @media (max-width: 991.98px) {
     .navbar-collapse {
         background-color: white;
@@ -48,18 +47,7 @@ main {
     }
 }
 
-    .navbar-nav {
-        margin-bottom: 15px;
-    }
-    
-    .nav-item {
-        margin-bottom: 10px;
-    }
-    
-    .input-group {
-        margin-top: 15px;
-    }
-}
+
 
 /* Resto de tus estilos existentes (header-image, content-container, etc) */
 .header-image {
