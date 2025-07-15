@@ -30,8 +30,9 @@ main {
 /* Estilos para el navbar en móviles - VERSIÓN CORREGIDA */
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        position: fixed;
-        top: 70px; /* Igual al padding-top del body */
+        background-color: white;
+        padding: 1rem;
+        box-shadow: var(--shadow);
         left: 0;
         right: 0;
         background-color: white;
