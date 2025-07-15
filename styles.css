@@ -20,21 +20,25 @@
         color: #212529;
     }
 
-    .navbar {
-        box-shadow: var(--shadow);
-        background-color: #fff !important;
-    }
-
-    .navbar-brand img {
-        height: 30px; /* Más pequeño para móviles */
-        margin-right: 8px;
-    }
-
-    .search-btn {
-        background-color: var(--primary-color);
-        color: white;
-    }
-
+     /* Estilos personalizados */
+        body {
+            padding-top: 70px; /* Ajuste para fixed-top navbar */
+        }
+        
+        /* Estilos para el menú en móviles */
+        @media (max-width: 992px) {
+            .navbar-collapse {
+                background-color: #f8f9fa;
+                padding: 15px;
+                margin-top: 10px;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .search-btn {
+                margin-top: 10px;
+            }
+        }
     .header-image {
         max-height: 100px; /* Más pequeño para móviles */
         margin: 20px auto;
