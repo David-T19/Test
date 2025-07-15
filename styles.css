@@ -138,3 +138,31 @@
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
     }
+/* Estilos para el navbar en móviles */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: white;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-nav {
+        margin-bottom: 15px;
+    }
+    
+    .nav-item {
+        margin-bottom: 8px;
+    }
+    
+    .d-flex {
+        margin-top: 15px;
+    }
+    
+    /* Asegurar que el menú desplegable no quede detrás de otros elementos */
+    .navbar-collapse {
+        z-index: 1000;
+        position: relative;
+    }
+}
