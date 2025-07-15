@@ -122,15 +122,24 @@
         }
     }
 /* Asegurar que el footer salga del contenedor */
-.main-container {
-    position: relative;
-}
-
-footer {
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    width: 100vw;
-}
+.footer-full-width {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .rounded-top {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+    
+    /* Asegurar que el footer quede pegado al fondo */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    main {
+        flex: 1;
+    }
