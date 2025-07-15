@@ -1,155 +1,47 @@
+:root {
+    --primary-color: #0d6efd;
+    --primary-hover: #0b5ed7;
+    --secondary-color: #6c757d;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --info-bg: #e7f5ff;
+    --info-border: #d0ebff;
+    --info-text: #1864ab;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --border-radius: 0.375rem;
+}
 
-    :root {
-        --primary-color: #0d6efd;
-        --primary-hover: #0b5ed7;
-        --secondary-color: #6c757d;
-        --dark-color: #2c3e50;
-        --light-color: #f8f9fa;
-        --info-bg: #e7f5ff;
-        --info-border: #d0ebff;
-        --info-text: #1864ab;
-        --shadow: 0 2px 10px rgba(0,0,0,0.1);
-        --border-radius: 0.375rem;
-    }
+/* Estilos generales */
+body {
+    padding-top: 70px; /* Ajustado para fixed-top navbar */
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #212529;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-    /* Estilos generales */
-    body {
-        padding-top: 56px; /* Reducido para móviles */
-        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        line-height: 1.6;
-        color: #212529;
-    }
+main {
+    flex: 1;
+}
 
-     /* Estilos personalizados */
-        body {
-            padding-top: 70px; /* Ajuste para fixed-top navbar */
-        }
-        
-        /* Estilos para el menú en móviles */
-        @media (max-width: 992px) {
-            .navbar-collapse {
-                background-color: #f8f9fa;
-                padding: 15px;
-                margin-top: 10px;
-                border-radius: 5px;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            }
-            
-            .search-btn {
-                margin-top: 10px;
-            }
-        }
-    .header-image {
-        max-height: 100px; /* Más pequeño para móviles */
-        margin: 20px auto;
-        display: block;
-    }
-
-    .content-container {
-        max-width: 100%;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.5rem; /* Tamaño más adecuado para móviles */
-        margin: 20px 0;
-        padding-bottom: 8px;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    /* Ajustes específicos para móviles */
-    @media (max-width: 768px) {
-        .navbar-collapse {
-            background-color: white;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-        
-        .nav-item {
-            margin-bottom: 5px;
-        }
-        
-        .input-group {
-            margin-top: 10px;
-        }
-        
-        .list-group-item {
-            padding: 12px 15px;
-            font-size: 0.9rem;
-        }
-        
-        .table th, .table td {
-            padding: 8px;
-            font-size: 0.85rem;
-        }
-        
-        .btn {
-            padding: 8px 12px;
-            font-size: 0.9rem;
-        }
-        
-        footer .row > div {
-            margin-bottom: 20px;
-        }
-    }
-
-    @media (max-width: 576px) {
-        body {
-            padding-top: 50px;
-        }
-        
-        h1 {
-            font-size: 1.3rem;
-            text-align: center;
-        }
-        
-        .navbar-brand img {
-            height: 25px;
-        }
-        
-        .header-image {
-            max-height: 80px;
-        }
-        
-        .d-md-flex {
-            flex-direction: column;
-        }
-        
-        .btn {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-    }
-/* Eliminar márgenes horizontales del body para que no haya scroll horizontal */
-    body {
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-    
-    main {
-        flex: 1;
-    }
-    
-    /* Opcional: ajustar el radio de los bordes si se desea más redondeado */
-    .rounded-top {
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-    }
-/* Estilos para el navbar en móviles */
-@media (max-width: 992px) {
+/* Estilos para el navbar en móviles - VERSIÓN CORREGIDA */
+@media (max-width: 991.98px) {
     .navbar-collapse {
+        position: fixed;
+        top: 70px; /* Igual al padding-top del body */
+        left: 0;
+        right: 0;
         background-color: white;
-        padding: 15px;
-        margin-top: 10px;
-        border-radius: 0.5rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 0;
+        border-radius: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
     
     .navbar-nav {
@@ -157,16 +49,24 @@
     }
     
     .nav-item {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
     }
     
-    .d-flex {
+    .input-group {
         margin-top: 15px;
     }
-    
-    /* Asegurar que el menú desplegable no quede detrás de otros elementos */
-    .navbar-collapse {
-        z-index: 1000;
-        position: relative;
-    }
+}
+
+/* Resto de tus estilos existentes (header-image, content-container, etc) */
+.header-image {
+    max-height: 100px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* ... (mantén el resto de tus estilos como están) ... */
+
+.rounded-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
