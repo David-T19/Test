@@ -121,22 +121,16 @@
             margin-bottom: 10px;
         }
     }
-/* Footer que ocupa todo el ancho */
-.footer-full-width {
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    width: 100vw;
+/* Asegurar que el footer salga del contenedor */
+.main-container {
     position: relative;
 }
 
-/* Asegurar que el footer esté pegado al final */
 footer {
-    margin-top: auto;
-}
-
-/* Para que el contenido del footer tenga márgenes apropiados */
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
 }
