@@ -121,20 +121,9 @@
             margin-bottom: 10px;
         }
     }
-/* Asegurar que el footer salga del contenedor */
-.footer-full-width {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-    .rounded-top {
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-    }
-    
-    /* Asegurar que el footer quede pegado al fondo */
+/* Eliminar márgenes horizontales del body para que no haya scroll horizontal */
     body {
+        overflow-x: hidden;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -142,4 +131,10 @@
     
     main {
         flex: 1;
+    }
+    
+    /* Opcional: ajustar el radio de los bordes si se desea más redondeado */
+    .rounded-top {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
     }
